@@ -49,5 +49,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - This configuration will ensure consistent code formatting across the project.
 
 
+## [1.0.3] - 2024-10-11
+### Added
+- **chore**: Add `.gitignore` file to exclude custom user configs and lock files.
+  - Introduces the `.gitignore` file to specify files and directories that should be ignored by Git.
+  - The file includes entries to exclude custom user configurations and lock files, ensuring that sensitive or environment-specific files are not committed to the repository.
+  - Key exclusions include:
+    - **lua/user/**: Custom user configurations.
+    - **lua/plugins/lock.json**: Plugin lock file.
+    - **lazy-lock.json**: Lazy plugin manager lock file.
+  - This configuration will help maintain a clean and consistent repository by excluding unnecessary files
+
+
 [Unreleased]: https://github.com/Elixir-Software-Developer/nvim_new/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/Elixir-Software-Developer/nvim_new/releases/tag/v1.0.0
