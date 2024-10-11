@@ -46,6 +46,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **chore**: Add GNU General Public License v3.0 to the repository.
   - This license ensures that the project remains open and that contributions are shared with the community under the same terms.
 
+## [1.0.5] - 2024-10-11
+### Added
+- **feat**: Add initial `init.lua` configuration file - Step 01.
+  - Introduces the initial `init.lua` configuration file for the Neovim setup.
+  - This file serves as the entry point for all Neovim configurations and settings.
+  - Includes basic setup and plugin management using the Lazy plugin manager.
+  - Initial plugin list.
+  - This marks the beginning of the step-by-step development process for the Neovim configuration.
+
 
 [Unreleased]: https://github.com/Elixir-Software-Developer/nvim_new/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/Elixir-Software-Developer/nvim_new/releases/tag/v1.0.0
