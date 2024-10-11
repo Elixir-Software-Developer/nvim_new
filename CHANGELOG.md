@@ -26,26 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **docs**: Add keybindings documentation to `nvim_new`.
   - Introduces the `keybindings.md` file to document all the keybindings defined for `nvim_new`.
-  - The file provides a comprehensive list of keybindings categorized by mode (Normal and Visual) and by letter.
-  - Key sections include:
-    - **Leader Bindings (Normal Mode)**: Keybindings in Normal mode using the Leader key.
-    - **Leader Bindings (Visual Mode)**: Keybindings in Visual mode using the Leader key.
-    - **Non Leader Bindings**: Keybindings that do not use the Leader key.
-  - This documentation will help users understand and utilize the keybindings effectively.
+
 
 ## [1.0.2] - 2024-10-11
 ### Added
 - **chore**: Add `.stylua.toml` configuration file.
   - Introduces the `.stylua.toml` configuration file to define the code formatting rules for StyLua, a Lua code formatter.
-  - The configuration includes settings for call parentheses, simple statement collapsing, column width, indent type, indent width, line endings, and quote style.
-  - Key settings include:
-    - **call_parentheses**: Always
-    - **collapse_simple_statement**: Never
-    - **column_width**: 120
-    - **indent_type**: Spaces
-    - **indent_width**: 4
-    - **line_endings**: Unix
-    - **quote_style**: AutoPreferSingle
   - This configuration will ensure consistent code formatting across the project.
 
 
@@ -53,12 +39,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **chore**: Add `.gitignore` file to exclude custom user configs and lock files.
   - Introduces the `.gitignore` file to specify files and directories that should be ignored by Git.
-  - The file includes entries to exclude custom user configurations and lock files, ensuring that sensitive or environment-specific files are not committed to the repository.
-  - Key exclusions include:
-    - **lua/user/**: Custom user configurations.
-    - **lua/plugins/lock.json**: Plugin lock file.
-    - **lazy-lock.json**: Lazy plugin manager lock file.
-  - This configuration will help maintain a clean and consistent repository by excluding unnecessary files
+
+
+## [1.0.4] - 2024-10-11
+### Added
+- **chore**: Add GNU General Public License v3.0 to the repository.
+  - This license ensures that the project remains open and that contributions are shared with the community under the same terms.
 
 
 [Unreleased]: https://github.com/Elixir-Software-Developer/nvim_new/compare/v1.0.0...HEAD
