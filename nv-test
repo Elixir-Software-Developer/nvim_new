@@ -1,0 +1,41 @@
+################################################################################
+# Script: nv-test
+# Author: Roberto Flores
+# Email: fq211776@alumno.udb.edu.sv
+# GitHub: https://github.com/Elixir-Software-Developer/
+# Version: 1.0
+# Description: Script to set up an isolated testing environment for Neovim.
+#              This script creates a testing directory, copies the Neovim
+#              configuration into that directory, and runs Neovim with the
+#              XDG_DATA_HOME and XDG_CONFIG_HOME environment variables set to
+#              point to the testing directory.
+################################################################################
+# Example Usage:
+# To set up the testing environment and run Neovim with the isolated configuration:
+# bash nv-tests ~/.zshrc
+################################################################################
+
+#!/usr/bin/env bash
+
+# Define the path for the Neovim testing directory
+NVIM_TESTS=~/.config/nvim-tests
+export NVIM_TESTS
+
+# Remove any previous content in the testing directory
+rm -rf $NVIM_TESTS
+
+# Create the necessary directories within the testing directory
+mkdir -p $NVIM_TESTS/share
+mkdir -p $NVIM_TESTS/nvim
+
+# Copy all files and directories from the current Neovim configuration
+# into the testing directory
+cp -r ./* $NVIM_TESTS/nvim/
+
+# Set the XDG_DATA_HOME and XDG_CONFIG_HOME environment variables
+# to point to the testing directory
+XDG_DATA_HOME=$NVIM_TESTS/share
+XDG_CONFIG_HOME=$NVIM_TESTS
+
+# Function to run Neovim with the specified environment variables and command
+exec -a "$NVIM_APPNAME" nvim -u "$HOME/.config/nvim-tests/init.lua" "$@"
