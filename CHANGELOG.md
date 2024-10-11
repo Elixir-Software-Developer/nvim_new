@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2023-10-05
+## [1.0.0] - 2024-10-11
 ### Added
 - **feat**: Add script to set up isolated Neovim testing environment.
   - Introduces a new script, `nv_test`, which sets up an isolated testing environment for Neovim.
@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - To set up the testing environment and run Neovim with the isolated configuration, execute the script using `bash nvim_tests_setup.sh`.
   - This script is useful for setting up an isolated testing environment for Neovim, where you can make changes to the configuration without affecting your main working environment.
 
-## [1.0.1] - 2023-10-06
+## [1.0.1] - 2024-10-11
 ### Added
 - **docs**: Add keybindings documentation to `nvim_new`.
   - Introduces the `keybindings.md` file to document all the keybindings defined for `nvim_new`.
@@ -32,6 +32,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - **Leader Bindings (Visual Mode)**: Keybindings in Visual mode using the Leader key.
     - **Non Leader Bindings**: Keybindings that do not use the Leader key.
   - This documentation will help users understand and utilize the keybindings effectively.
+
+## [1.0.2] - 2024-10-11
+### Added
+- **chore**: Add `.stylua.toml` configuration file.
+  - Introduces the `.stylua.toml` configuration file to define the code formatting rules for StyLua, a Lua code formatter.
+  - The configuration includes settings for call parentheses, simple statement collapsing, column width, indent type, indent width, line endings, and quote style.
+  - Key settings include:
+    - **call_parentheses**: Always
+    - **collapse_simple_statement**: Never
+    - **column_width**: 120
+    - **indent_type**: Spaces
+    - **indent_width**: 4
+    - **line_endings**: Unix
+    - **quote_style**: AutoPreferSingle
+  - This configuration will ensure consistent code formatting across the project.
 
 
 [Unreleased]: https://github.com/Elixir-Software-Developer/nvim_new/compare/v1.0.0...HEAD
