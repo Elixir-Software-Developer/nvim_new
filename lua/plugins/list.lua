@@ -14,7 +14,6 @@
 -- #              adaptable a diferentes entornos de desarrollo.
 -- ################################################################################
 
-
 -- Función para cargar la configuración de un paquete
 local function load_config(package)
     return function()
@@ -35,11 +34,14 @@ local plugins = {
     -- Completion
 
     -- Tools
-
+    {
+        'folke/which-key.nvim',
+        config = load_config('tools.which-key'),
+        event = 'VeryLazy',
+    },
     -- Telescope
 
     -- Git
-
 }
 
 -- Lista de parsers de Tree-sitter
@@ -151,7 +153,7 @@ if util.is_present('cargo') then
 end
 
 -- Cargar plugins personalizados
-local custom_plugins = require("plugins.custom_plugins")
+local custom_plugins = require('plugins.custom_plugins')
 vim.list_extend(plugins, custom_plugins)
 
 -- Retornar la configuración

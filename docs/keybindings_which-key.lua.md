@@ -1,4 +1,16 @@
-# [nvim_new](https://github.com/Elixir-Software-Developer/nvim_new) [Keybindings](https://github.com/Elixir-Software-Developer/nvim_new/blob/main/docs/keybindings.md)
+<!-- ################################################################################
+-- # Script: docs/keybindings_keys.lua.md
+-- # Author: https://github.com/2KAbhishek
+-- # Modifications by: Roberto Flores
+-- # Email: fq211776@alumno.udb.edu.sv
+-- # GitHub: https://github.com/Elixir-Software-Developer/
+-- # Version: 1.0
+-- # Description: El archivo keybindings_which-key.lua.md extrae todos los atajos
+-- #              de teclado declarados en el archivo which-key.lua y los presenta
+-- #              resumidos en una forma facil de entender y memorizar.
+-- ################################################################################ -->
+
+# [nvim_new](https://github.com/Elixir-Software-Developer/nvim_new) [keybindings_which-key.lua.md](https://github.com/Elixir-Software-Developer/nvim_new/blob/main/docs/keybindings_which-key.lua.md)
 
 Here are all the keybindings defined for nvim_new
 
@@ -6,9 +18,8 @@ Check out the source code of individual files for more info.
 
 Sources:
 
-- [Which Key](../lua/plugins/tools/which-key.lua) - Biggest source of keybindings, fully documented.
-- [General](../lua/core/keys.lua) - Changes behavior of core keys,
-- Individual plugin configs - Check out the source code of individual files in [plugins](../lua/plugins/) for more info.
+# - [Which Key](../lua/plugins/tools/which-key.lua) - Biggest source of keybindings, fully documented.
+
 
 ## Leader Bindings (Normal Mode)
 
@@ -127,12 +138,21 @@ Sources:
 |                                    |                 |
 |                                    |                 |
 
-### p
+### p - Packages
 
-| Keybinding                         | Action          |
-| ---------------------------------- | --------------- |
-|                                    |                 |
-|                                    |                 |
+| Keybinding                         | Action  |
+| ---------------------------------- | ------- |
+| <kbd>Leader</kbd> <kbd> p c </kbd> | Check   |
+| <kbd>Leader</kbd> <kbd> p d </kbd> | Debug   |
+| <kbd>Leader</kbd> <kbd> p i </kbd> | Install |
+| <kbd>Leader</kbd> <kbd> p l </kbd> | Log     |
+| <kbd>Leader</kbd> <kbd> p m </kbd> | Mason   |
+| <kbd>Leader</kbd> <kbd> p P </kbd> | Profile |
+| <kbd>Leader</kbd> <kbd> p p </kbd> | Plugins |
+| <kbd>Leader</kbd> <kbd> p r </kbd> | Restore |
+| <kbd>Leader</kbd> <kbd> p s </kbd> | Sync    |
+| <kbd>Leader</kbd> <kbd> p u </kbd> | Update  |
+| <kbd>Leader</kbd> <kbd> p x </kbd> | Clean   |
 
 ### q
 
@@ -413,7 +433,7 @@ Sources:
 | ---------------------------------- | --------------- |
 |                                    |                 |
 |
-                                    |                 |
+
 ### ] - Next
 
 | Keybinding                         | Action          |

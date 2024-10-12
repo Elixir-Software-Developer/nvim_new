@@ -46,8 +46,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **chore**: Add GNU General Public License v3.0 to the repository.
   - This license ensures that the project remains open and that contributions are shared with the community under the same terms.
 
-## [1.0.5] - 2024-10-11
-### Added
+## [1.0.5] - 2024-10-11 [Step 01]
+
 - **feat**: Step 01 - Add initial `init.lua` configuration file.
   - Introduces the initial `init.lua` configuration file for the Neovim setup.
   - This file serves as the entry point for all Neovim configurations and settings.
@@ -55,17 +55,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Initial plugin list.
   - This marks the beginning of the step-by-step development process for the Neovim configuration.
 
-
-## [1.0.6] - 2024-10-11
 ### Added
+- **init.lua**:  Entrypoint of my NeoVim configuration.
+
+## [1.0.6] - 2024-10-11 [Step 02]
+
 - **feat**: Step 02 - Add Lazy plugin manager and necessary files for its operation.
   - This commit marks the second step in the step-by-step configuration process for Neovim.
-  - Addition of the Lazy plugin manager.
-  - Configuration of Lazy plugin manager settings.
-  - Definition of icons for UI elements in icons.lua.
-  - Utility functions in util.lua for installing LSP servers only if their corresponding executables are installed (e.g., gopls only if go is installed).
-  - Custom plugins in custom_plugins.lua for installing additional specific plugins.
-  - As an example of the functionality, we have installed the 'mini.animate' plugin to demonstrate the plugin management capabilities of Lazy. This plugin is configured to disable scroll animations.
+
+### Added
+
+- **lua/plugins/list.lua**: - list of plugin to install, empty at the momment.
+- **lua/plugins/lazy.lua**: - Addition of the Lazy plugin manager.
+- **lua/plugins/custom_plugins.lua**:  - As an example of the functionality, we have installed the 'mini.animate' plugin to demonstrate the plugin management capabilities of Lazy.
+- **lua/lib/icons.lua**: - Definition of icons for UI elements in icons.lua.
+- **lua/lib/util.lua**: - Utility functions in util.lua for installing LSP servers only if their corresponding executables are installed (e.g., gopls only if go is installed).
+
+
+## ## [1.0.7] - 2024-10-11 [Step 03]
+
+- **feat**: Step 03 -  Add whichkey.lua and necessary files for its functionality.
+This step adds the configuration and necessary files for the functionality of the `which-key.nvim` plugin, including the definition of the leader key and extension with custom options. Detailed documentation has also been added for each modified or added file.
+
+
+### Added
+
+- **plugins/tool/which-key.lua**: Configuration for the `which-key.nvim` plugin.
+- **lua/core/keys.lua**: Definition of the leader key necessary for the functionality of `which-key.lua`, as well as many useful keybindings.
+- **lua/custom_keys.lua**: Extension with more custom options for the `which-key.lua` menu.
+- **docs/keybindings_custom-keys.lua.md**: Documentation for `custom-keys.lua`.
+- **docs/keybindings_keys.lua.md**: Documentation for `keys.lua`.
+- **docs/keybindings_which-key.lua.md**: Documentation for `which-key.lua`.
+
+### Changed
+
+- **init.lua**: Now invokes `lua/core/keys.lua` to configure keybindings.
+- **plugins/list.lua**: Now includes the installation of `which-key.nvim`.
 
 
 [Unreleased]: https://github.com/Elixir-Software-Developer/nvim_new/compare/v1.0.0...HEAD
